@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap");
+.portfolio-page {
+  padding-left: 100px;
+  padding-right: 50px;
+  width: calc(100% - 150px);
+  position: initial;
+  height: 100%;
+  overflow: auto;
+}
+.portfolio-page h1.page-title {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.portfolio-page .images-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+.portfolio-page .image-box {
+  position: relative;
+  flex: 1 1 20%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: calc(25% - 10px);
+}
+.portfolio-page .image-box .portfolio-image {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio-page .image-box .content {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 10px 20px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0, rgb(0, 0, 0));
+  bottom: -70px;
+}
+.portfolio-page .image-box .title {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.portfolio-page .image-box .description {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+.portfolio-page .image-box .btn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0 23px;
+  height: 40px;
+  line-height: 34px;
+  border: 2px solid #ffd700;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+.portfolio-page .image-box .btn:hover {
+  transform: translateY(-3px);
+  background: #ffd700;
+}
+.portfolio-page .image-box:after {
+  content: "";
+  background: linear-gradient(180deg, #ffd700, #000);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+}
+.portfolio-page .image-box:hover:after {
+  opacity: 0.85;
+}
+.portfolio-page .image-box:hover .content {
+  bottom: 0;
+  background: transparent;
+}
+
+.project {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+  color: yellowgreen;
+  border: 5px solid #80e1c3;
+  font-family: "Comic Neue", cursive;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.project .projectNames {
+  padding: 15px;
+}
+.project .buttons {
+  padding: 15px;
+}
+.project .buttons button {
+  width: 100px;
+  margin: 3px;
+  height: 40px;
+  background-color: #bfcc5e;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Comic Neue", cursive;
+  border-radius: 20px;
+}
+.project .buttons button a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 7px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 7, 7);
+  border-radius: 10px;
+}/*# sourceMappingURL=index.css.map */
